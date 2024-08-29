@@ -26,17 +26,17 @@ Documentation for packages and methods in source of written solution.
 Project go packages
 
 * [Models](#models)
-    * [Process](#process--uuid-err)
-    * [parseTimeDataFromDateAndTimeStrings](#parsetimedatafromdateandtimestrings--purchaseday-hours-mins-err)
-    * [GetReceiptById](#getreceiptbyid--id-string--receipt-err)
+    * [Process](#processMethod)
+    * [parseTimeDataFromDateAndTimeStrings](#parsetimedatafromdateandtimestringsMethod)
+    * [GetReceiptById](#getreceiptbyidMethod)
 * [Router](#router)
     * [GET](#get-receiptsidpoints)
     * [POST](#post-receiptsprocess)
 * [Utils](#utils)
-    * [CountAlphanumericCharsInString](#countalphanumericcharsinstring--str-string--int)
-    * [Float64IsWholeNumber](#float64iswholenumber--number-float64--bool)
-    * [Float64IsMultipleOf](#float64ismultipleof--number-float64-divisor-float64--bool)
-    * [IntIsMultipleOf](#intismultipleof--number-int-divisor-int--bool)
+    * [CountAlphanumericCharsInString](#countalphanumericcharsinstringMethod)
+    * [Float64IsWholeNumber](#float64iswholenumberMethod)
+    * [Float64IsMultipleOf](#float64ismultipleofMethod)
+    * [IntIsMultipleOf](#intismultipleofMethod)
 
 ### [Models](/models/)
 
@@ -64,6 +64,7 @@ Contains structs and their methods for receipts and items within a receipt
 
     > Struct Methods
 
+    <span id="processMethod"></span>
     * #### _**Process**_ <sup> _uuid, err_</sup>
     
         Determines points awarded to a receipt and returns a uuid after successfully aggregating points
@@ -86,6 +87,7 @@ Contains structs and their methods for receipts and items within a receipt
 
         `a4566f0b-c7de-4b58-948e-7467993abd64`
 
+    <span id="parsetimedatafromdateandtimestringsMethod"></span>
     * #### _**parseTimeDataFromDateAndTimeStrings**_ <sup> _purchaseDay, hours, mins, err_ </sup>
 
         Parses time data from purchase date and purchase time strings within receipt, and returns clock info as integers for point calculations
@@ -112,6 +114,7 @@ Contains structs and their methods for receipts and items within a receipt
 
     > Methods
 
+    <span id="getreceiptbyidMethod"></span>
     * #### _**GetReceiptById**_ <sub> _id **string**_</sub> <sup> _Receipt, err_ </sup>
 
         Fetches receipt by uuid from map stored in application memory
@@ -169,6 +172,7 @@ Contains methods to help with the process of calculating points, and to improve 
 
 > Methods
 
+<span id="countalphanumericcharsinstringMethod"></span>
 * #### _**CountAlphanumericCharsInString**_ <sub> _str **string**_</sub> <sup> _int_ </sup>
 
     Counts number of alphanumeric characters in string, and returns count as an integer.
@@ -188,6 +192,7 @@ Contains methods to help with the process of calculating points, and to improve 
 
     `5`
 
+<span id="float64iswholenumberMethod"></span>
 * #### _**Float64IsWholeNumber**_ <sub> _number **float64**_</sub> <sup> _bool_ </sup>
 
     Checks if float64 is a whole number, returns true if float64 is a whole number.
@@ -207,6 +212,7 @@ Contains methods to help with the process of calculating points, and to improve 
 
     `true`
 
+<span id="float64ismultipleofMethod"></span>
 * #### _**Float64IsMultipleOf**_ <sub> _number **float64**, divisor **float64**_</sub> <sup> _bool_ </sup>
 
     Checks if float64 is a multiple of a given float64 divisor, returns true if _number_ is **multiple** of _divisor_.
@@ -226,6 +232,7 @@ Contains methods to help with the process of calculating points, and to improve 
 
     `true`
 
+<span id="intismultipleofMethod"></span>
 * #### _**IntIsMultipleOf**_ <sub> _number **int**, divisor **int**_</sub> <sup> _bool_ </sup>
 
     Checks if integer is a multiple of a given integer divisor, returns true if _number_ is **multiple** of _divisor_.
